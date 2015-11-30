@@ -32,11 +32,6 @@
 		
 		<dependency>
 			<groupId>com.siling.service.hello</groupId>
-			<artifactId>hello-rpc</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.siling.service.hello</groupId>
 			<artifactId>hello-mq</artifactId>
 		</dependency>
 				
