@@ -19,10 +19,6 @@
 			<groupId>com.tower.soafw</groupId>
 			<artifactId>tower-cache</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.siling.service.hello</groupId>
-			<artifactId>hello-config</artifactId>
-		</dependency>
 		
 		<dependency>
 			<groupId>junit</groupId>

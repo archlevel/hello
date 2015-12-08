@@ -89,7 +89,6 @@
 	</properties>
 	<modules>
 		<module>hello-util</module>
-		<module>hello-config</module>
 		<module>hello-cache</module>
 		<module>hello-dao</module>
 		<module>hello-domain</module>
@@ -110,6 +109,11 @@
 	        <dependency>
 	            <groupId>com.tower.soafw</groupId>
 	            <artifactId>tower-config</artifactId>
+	            <version>${soafw-common.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>com.tower.soafw</groupId>
+	            <artifactId>tower-concurrent</artifactId>
 	            <version>${soafw-common.version}</version>
 	        </dependency>
 	        <dependency>
@@ -161,11 +165,6 @@
 			<dependency>
 				<groupId>com.siling.service.hello</groupId>
 				<artifactId>hello-util</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.siling.service.hello</groupId>
-				<artifactId>hello-config</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

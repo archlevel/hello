@@ -5,14 +5,13 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.stereotype.Repository;
-import com.tower.service.dao.ibatis.AbsIntIDIBatisDAOImpl;
-import com.tower.service.dao.ibatis.IIMapper;
-
-import com.tower.service.dao.ibatis.IBatisDAOException;
 
 import com.siling.service.hello.dao.ICodeDAO;
 import com.siling.service.hello.dao.ibatis.mapper.CodeMapper;
 import com.siling.service.hello.dao.model.Code;
+import com.tower.service.dao.ibatis.AbsIntIDIBatisDAOImpl;
+import com.tower.service.dao.ibatis.IBatisDAOException;
+import com.tower.service.dao.ibatis.IIMapper;
 import com.tower.service.dao.ibatis.SqlmapUtils;
 import com.tower.service.exception.DataAccessException;
 
@@ -28,12 +27,6 @@ public class CodeIbatisDAOImpl extends AbsIntIDIBatisDAOImpl<Code> implements IC
 	@Resource(name = "helloMapQuerySessionFactory")
 	private SqlSessionFactory mapQuerySessionFactory;
 	
-	@Override
-	public int getVersion(){
-		//代码生成器版本号，请不要手动改
-	    return 2;
-	}
-  
 	@Override
 	public Class<CodeMapper> getMapperClass() {
 		
@@ -94,7 +87,7 @@ public class CodeIbatisDAOImpl extends AbsIntIDIBatisDAOImpl<Code> implements IC
       		IIMapper<Code> mapper = session.getMapper(getMapperClass());
       		Long id = mapper.insert(model);
       		if (id !=null) {
-        		this.incrTabVersion(tabNameSuffix);
+        		this.incrTabVersion(CallFrom_PK,tabNameSuffix);
       		}
 
       		if (logger.isDebugEnabled()) {
@@ -108,5 +101,4 @@ public class CodeIbatisDAOImpl extends AbsIntIDIBatisDAOImpl<Code> implements IC
      		SqlmapUtils.release(session,sessionFactory);
     	}
   	}
-	
 }
