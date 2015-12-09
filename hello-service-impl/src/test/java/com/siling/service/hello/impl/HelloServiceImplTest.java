@@ -1,4 +1,4 @@
-package com.siling.service.hello;
+package com.siling.service.hello.impl; 
 
 import javax.annotation.Resource;
 
@@ -7,11 +7,12 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.siling.service.hello.IHelloService;
 import com.tower.service.annotation.SoaFwTest;
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:/META-INF/config/spring/spring-service.xml" })
-public class HelloImplTest {
+@ContextConfiguration( locations = { "classpath*:/META-INF/config/spring/spring-service.xml"})
+public class HelloServiceImplTest {
+	
 	@Resource(name = "helloService")
 	private IHelloService hello;
 
@@ -20,4 +21,5 @@ public class HelloImplTest {
 	public void sayHello() {
 		hello.sayHello();
 	}
+
 }
