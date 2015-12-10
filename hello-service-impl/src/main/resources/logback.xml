@@ -42,7 +42,9 @@
     <logger name="org.apache.zookeeper" level="INFO"/>
     <logger name="com.tower.service" level="INFO"/>
     <logger name="com.siling.service" level="INFO"/>
-    <root level="INFO">
+    <logger name="org.mybatis" level="INFO"/>
+    <logger name="com.tower.service.cache" level="DEBUG"/>
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="detail"/>
         <appender-ref ref="error"/>

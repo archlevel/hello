@@ -19,7 +19,14 @@ public class HelloServiceImplTest {
 	@Test
 	@SoaFwTest(id="1a207b9f23579e35d1dfdd4e555ba9fa", method="sayHello", params={"sayHello"})
 	public void sayHello() {
-		hello.sayHello();
+		int i=0;
+		while(true){
+			i++;
+			hello.sayHello();
+			if(i==3){
+				break;
+			}
+		}
 	}
 
 }
