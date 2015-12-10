@@ -16,7 +16,7 @@ public class Code implements IModel{
 		/**
 		 * 把该model相关的外键属性字段注册到fks map中
 		 */
-		//eg:fks.put("cityId",0);
+		fks.put("no",0);
 	}
 	/**
 	 * 是否是外键字段
