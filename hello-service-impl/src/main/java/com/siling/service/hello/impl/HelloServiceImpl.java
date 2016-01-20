@@ -17,6 +17,7 @@ public class HelloServiceImpl extends AbsServiceImpl implements IHelloService {
 	
 	@Resource(name="Code")
 	private  ICodeDAO<Code> codeDAO;
+	
 	@Override
 	public void sayHello() {
 		long start = System.currentTimeMillis();
@@ -28,5 +29,10 @@ public class HelloServiceImpl extends AbsServiceImpl implements IHelloService {
 		codes = codeDAO.queryByMap(params, null);
 		System.out.println(codes+" "+(System.currentTimeMillis()-start)+" ms");
 		
+	}
+	
+	@Override
+	public void sayHello1() {
+		System.out.println("--------");
 	}
 }
